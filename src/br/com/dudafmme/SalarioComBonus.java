@@ -5,7 +5,7 @@ import java.util.Locale;
 import java.util.Scanner;
 
 /*
- * 1008 - Salario com bonus
+ * 1009 - Salario com bonus
  */
 public class SalarioComBonus {
 	public static void main(String[] args) {
