@@ -2,6 +2,9 @@ package br.com.dudafmme;
 
 import java.util.Scanner;
 
+/*
+ * 1018 - Cedulas
+ */
 public class Cedulas {
 	public static void main(String[] args) {
 		Scanner entrada = new Scanner(System.in);
@@ -29,6 +32,5 @@ public class Cedulas {
 		System.out.printf("%d nota(s) de R$ 5,00\n", cinco);
 		System.out.printf("%d nota(s) de R$ 2,00\n", dois);
 		System.out.printf("%d nota(s) de R$ 1,00\n", um);
-
 	}
 }
