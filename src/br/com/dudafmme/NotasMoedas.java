@@ -7,18 +7,20 @@ import java.util.Scanner;
  * 1021 - Notas e Moedas
  */
 public class NotasMoedas {
-		public static void main(String[] args) {
-			Locale.setDefault(Locale.US);
-			Scanner entrada = new Scanner(System.in);
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		Scanner entrada = new Scanner(System.in);
 
-			int n100, n50, n20, n10, n5, n2;
-			int m1, m50, m25, m10, m05, m01;
-			double dinheiro;
-			int notas, resto, moedas;
+		int n100, n50, n20, n10, n5, n2;
+		int m1, m50, m25, m10, m05, m01;
+		double dinheiro;
+		int notas, resto, moedas;
+		Double max = 1000000.00;
 
-			dinheiro = entrada.nextDouble();
-			entrada.close();
-			
+		dinheiro = entrada.nextDouble();
+
+		if (dinheiro <= max) {
+
 			notas = (int) dinheiro;
 			moedas = (int) Math.round((dinheiro % notas) * 100);
 
@@ -57,6 +59,6 @@ public class NotasMoedas {
 			System.out.printf("%d moeda(s) de R$ 0.10\n", m10);
 			System.out.printf("%d moeda(s) de R$ 0.05\n", m05);
 			System.out.printf("%d moeda(s) de R$ 0.01", m01);
-			
 		}
 	}
+}
