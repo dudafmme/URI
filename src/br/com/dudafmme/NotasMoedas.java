@@ -20,9 +20,8 @@ public class NotasMoedas {
 		dinheiro = entrada.nextDouble();
 
 		if (dinheiro <= max) {
-
 			notas = (int) dinheiro;
-			moedas = (int) Math.round((dinheiro % notas) * 100);
+			moedas = (int) Math.round(100 * (dinheiro % notas));
 
 			n100 = notas / 100;
 			resto = notas % 100;
@@ -47,18 +46,22 @@ public class NotasMoedas {
 			resto = resto % 5;
 			m01 = resto / 1;
 
-			System.out.printf("NOTAS:\n%d nota(s) de R$ 100.00\n", n100);
-			System.out.printf("%d nota(s) de R$ 50.00\n", n50);
-			System.out.printf("%d nota(s) de R$ 20.00\n", n20);
-			System.out.printf("%d nota(s) de R$ 10.00\n", n10);
-			System.out.printf("%d nota(s) de R$ 5.00\n", n5);
-			System.out.printf("%d nota(s) de R$ 2.00\n", n2);
-			System.out.printf("MOEDAS:\n%d moeda(s) de R$ 1.00\n", m1);
-			System.out.printf("%d moeda(s) de R$ 0.50\n", m50);
-			System.out.printf("%d moeda(s) de R$ 0.25\n", m25);
-			System.out.printf("%d moeda(s) de R$ 0.10\n", m10);
-			System.out.printf("%d moeda(s) de R$ 0.05\n", m05);
-			System.out.printf("%d moeda(s) de R$ 0.01", m01);
+			System.out.printf("NOTAS:\n" 
+					+ "%d nota(s) de R$ 100.00\n" 
+					+ "%d nota(s) de R$ 50.00\n"
+					+ "%d nota(s) de R$ 50.00\n" 
+					+ "%d nota(s) de R$ 10.00\n" 
+					+ "%d nota(s) de R$ 5.00\n"
+					+ "%d nota(s) de R$ 2.00\n" 
+					+ "MOEDAS:\n" 
+					+ "%d moeda(s) de R$ 1.00\n" 
+					+ "%d moeda(s) de R$ 0.50\n"
+					+ "%d moeda(s) de R$ 0.25\n" 
+					+ "%d moeda(s) de R$ 0.10\n" 
+					+ "%d moeda(s) de R$ 0.05\n"
+					+ "%d moeda(s) de R$ 0.01", 
+					n100, n50, n20, n10, n5, n2, 
+					m1, m50, m25, m10, m05, m01);
 		}
 	}
 }
